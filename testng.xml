@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loan Department" parallel ="tests" thread-count="2">
+<listeners>
+<listener class-name="TestNGPractice.Listeners"/>
+</listeners>
+  <test name="Smoke" parallel="classes" thread-count="2">
+  <parameter name=" URL" value="https://facebook.com"/>
+  <parameter name="username" value="nycMonir@gmail.com"/>
+    <classes>
+      <class name="TestNGPractice.day2">
+      <methods>
+      <include name = "webloginHomeLoan"/>
+      </methods>
+      </class>
+      <class name="TestNGPractice.day3"/>
+      <class name="TestNGPractice.day1"/>
+    </classes>
+  </test> 
+
+<test name = "Sanity Test">
+<classes>
+<class name = "TestNGPractice.day3">
+<methods>
+<exclude name="MobileLoginPersonalLoan"></exclude>
+</methods>
+</class>
+</classes>
+</test>
+</suite> 
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Loan Department]">
+  <parameter name=" URL" value="https://facebook.com"/>
+  <parameter name="username" value="nycMonir@gmail.com"/>
+  <listeners>
+    <listener class-name="TestNGPractice.Listeners"/>
+  </listeners>
+  <test name="Smoke(failed)">
+    <parameter name=" URL" value="https://facebook.com"/>
+    <parameter name="username" value="nycMonir@gmail.com"/>
+    <classes>
+      <class name="TestNGPractice.day1">
+        <methods>
+          <include name="webloginCarLoan"/>
+        </methods>
+      </class> <!-- TestNGPractice.day1 -->
+    </classes>
+  </test> <!-- Smoke(failed) -->
+</suite> <!-- Failed suite [Loan Department] -->
